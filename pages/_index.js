@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import Navigation from "../components/navigation";
+import Navigation from "../components/Navigation/index";
 
 function AppHome({ Component, pageProps }) {
   const { menuOpen } = useSelector((state) => state.global);
