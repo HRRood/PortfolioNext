@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import reducers from "../utils/reducers/index";
-import AppHome from "./_index";
+import AppHome from "../components/AppHome";
 
 // STYLEs
 import "../styles/globals.scss";
