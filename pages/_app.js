@@ -1,17 +1,15 @@
-import Navigation from "../components/navigation";
-import "../styles/globals.css";
+import { Provider } from "react-redux";
+import reducers from "../utils/reducers/index";
+import AppHome from "./_index";
+
+// STYLEs
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <header>
-        <Navigation />
-      </header>
-      <main>
-        <Component {...pageProps} />
-      </main>
-      <footer></footer>
-    </>
+    <Provider store={reducers}>
+      <AppHome Component={Component} pageProps={pageProps} />
+    </Provider>
   );
 }
 

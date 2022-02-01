@@ -8,10 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
     "next": "10.x",
     "react": "17.x",
     "react-dom": "17.x",
     "react-icons": "^4.3.1",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
     "sass": "^1.49.0"
   }
 }
