@@ -4,8 +4,13 @@
 @import "settings/settings.utils";
 
 // Components
+@import "components/components.button";
 @import "components/components.hamburger";
 @import "components/components.navigation";
+@import "components/components.input";
+
+// Pages
+@import "pages/pages.login";
 
 // App
 @import "app";
@@ -18,8 +23,12 @@ body {
 }
 
 a {
-  color: inherit;
+  color: $primary;
   text-decoration: none;
+
+  &:hover {
+    color: $primary-hover;
+  }
 }
 
 * {

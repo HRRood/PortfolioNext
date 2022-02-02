@@ -18,8 +18,8 @@
     position: absolute;
     height: 6px;
     width: 100%;
-    background: #181818;
-    border-radius: 9px;
+    background: $primary;
+    border-radius: $border-radius;
     opacity: 1;
     left: 0;
     -webkit-transform: rotate(0deg);

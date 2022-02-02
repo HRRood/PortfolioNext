@@ -35,15 +35,16 @@
 
   &__icon {
     position: relative;
+
     &--text {
       position: absolute;
-      bottom: -35px;
+      bottom: -50px;
       left: 50%;
       transform: translateX(-50%);
-      border-radius: 5px;
+      border-radius: $border-radius-sm;
       background: #00000093;
       color: white;
-      padding: 5px;
+      padding: 10px 15px;
       opacity: 0;
       transition: all 0.2s ease-in;
 
