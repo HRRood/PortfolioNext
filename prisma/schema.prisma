@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Roles {
+  idRoles  Int        @id @default(autoincrement())
+  name     String     @db.VarChar(45)
+  UserRole UserRole[]
+}
+
+model User {
+  idUser    Int        @id @unique(map: "idUser_UNIQUE") @default(autoincrement())
+  username  String     @db.VarChar(255)
+  password  String?    @db.VarChar(255)
+  firstname String?    @db.VarChar(255)
+  lastname  String?    @db.VarChar(255)
+  token     String?    @db.VarChar(255)
+  UserRole  UserRole[]
+}
+
+model UserRole {
+  idUser Int
+  idRole Int
+  Roles  Roles @relation(fields: [idRole], references: [idRoles], onDelete: NoAction, onUpdate: NoAction, map: "IdRole")
+  User   User  @relation(fields: [idUser], references: [idUser], onDelete: NoAction, onUpdate: NoAction, map: "idUser")
+
+  @@id([idUser, idRole])
+  @@index([idRole], map: "IdRole_idx")
+}
+
+// npx prisma db pull
+// npm prisma generate
