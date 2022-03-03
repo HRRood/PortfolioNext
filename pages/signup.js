@@ -1,10 +1,28 @@
 import Input from "../components/form/Input";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 export default function signup({}) {
+  const { loggedIn } = useSelector((state) => state.global);
+
   const submitForm = (e) => {
     e.preventDefault();
   };
+
+  if (loggedIn === null) {
+    return <></>;
+  }
+
+  if (loggedIn) {
+    return (
+      <div className="c-login">
+        <div className="c-login__content">
+          <h1>Already logged in</h1>
+          <Link href="/">Go back to home</Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="c-login">
       <div className="c-login__content">

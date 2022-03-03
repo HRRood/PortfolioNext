@@ -18,4 +18,9 @@
       background: $primary-hover;
     }
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    background: $primary-disabled !important;
+  }
 }

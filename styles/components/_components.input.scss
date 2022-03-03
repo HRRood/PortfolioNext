@@ -29,5 +29,13 @@
         top: 0;
       }
     }
+
+    &.error {
+      border-color: $danger;
+      color: $danger;
+    }
+  }
+  &__error {
+    color: $danger;
   }
 }

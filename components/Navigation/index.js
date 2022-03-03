@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Hamburger from "./Hamburger";
 import { FaRegUser } from "react-icons/fa";
-import { FiInfo } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { setMenuOpen } from "../../utils/reducers/global";
 import MenuItem from "./MenuItem";
 
 export default function Navigation({}) {
-  const { menuOpen, menuItems } = useSelector((state) => state.global);
+  const { menuOpen, menuItems, loggedIn } = useSelector((state) => state.global);
   const dispatch = useDispatch();
 
   const toggleMenu = () => {
@@ -24,6 +23,8 @@ export default function Navigation({}) {
           </div>
         );
       } else {
+        if (item.hideWhenLoggedin && loggedIn) return;
+        if (item.hideWhenNotLoggedin && !loggedIn) return;
         return <MenuItem key={i} name={item.name} url={item.path} />;
       }
     });

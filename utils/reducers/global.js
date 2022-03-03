@@ -13,6 +13,7 @@ const global = createSlice({
   name: namespace,
   initialState: {
     menuOpen: false,
+    loggedIn: null,
     menuItems: [
       {
         name: "Home",
@@ -40,8 +41,18 @@ const global = createSlice({
         path: "/contact",
       },
       {
+        name: "Private",
+        path: "/privatepage",
+      },
+      {
         name: "Login",
         path: "/login",
+        hideWhenLoggedin: true,
+      },
+      {
+        name: "Logout",
+        path: "/logout",
+        hideWhenNotLoggedin: true,
       },
     ],
   },
@@ -49,9 +60,12 @@ const global = createSlice({
     setMenuOpen: (state, action) => {
       state.menuOpen = action.payload;
     },
+    setUserLoggedIn: (state, action) => {
+      state.loggedIn = action.payload;
+    },
   },
 });
 
-export const { setMenuOpen } = global.actions;
+export const { setMenuOpen, setUserLoggedIn } = global.actions;
 
 export default global.reducer;
