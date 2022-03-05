@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 import reducers from "../utils/reducers/index";
-import AppHome from "../components/AppHome";
+import Layout from "../components/Layout";
 
 // STYLEs
 import "../styles/globals.scss";
@@ -8,7 +8,9 @@ import "../styles/globals.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={reducers}>
-      <AppHome Component={Component} pageProps={pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   );
 }

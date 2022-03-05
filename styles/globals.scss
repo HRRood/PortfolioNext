@@ -12,9 +12,6 @@
 // Pages
 @import "pages/pages.login";
 
-// App
-@import "app";
-
 html,
 body {
   padding: 0;
@@ -23,12 +20,8 @@ body {
 }
 
 a {
-  color: $primary;
+  color: $text;
   text-decoration: none;
-
-  &:hover {
-    color: $primary-hover;
-  }
 }
 
 * {
