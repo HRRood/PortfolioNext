@@ -1,7 +1,4 @@
-import Link from "next/link";
 import Hamburger from "./Hamburger";
-import { FaRegUser } from "react-icons/fa";
-import { FiInfo } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { setMenuOpen } from "../../utils/reducers/global";
 import MenuItem from "./MenuItem";
@@ -34,18 +31,7 @@ export default function Navigation({}) {
       <div className="c-navigation__content">
         <div className="c-navigation__brand">
           <Hamburger handleClick={toggleMenu} isOpen={menuOpen} />
-          <Link href="/">
-            <h1 className="c-navigation__title">Roy Roodenburg</h1>
-          </Link>
         </div>
-        {/* <div className="c-navigation__icons hidden-xs">
-          <Link href="/login">
-            <div className="c-navigation__icon">
-              <FaRegUser size="30" />
-              <span className="c-navigation__icon--text">Login</span>
-            </div>
-          </Link>
-        </div> */}
       </div>
 
       <div className={`c-navigation--side ${menuOpen ? "open" : ""}`}>

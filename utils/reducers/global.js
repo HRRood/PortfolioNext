@@ -2,13 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const namespace = "global";
 
-// export const funcname = createAsyncThunk(
-//   `${namespace}/test`,
-//   async () => {
-//     return something;
-//   }
-// );
-
 const global = createSlice({
   name: namespace,
   initialState: {

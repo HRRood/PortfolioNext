@@ -14,7 +14,7 @@ function Layout({ children }) {
         <main className={styles["c-main"]}>{children}</main>
         <footer>
           <a href="https://github.com/HRRood/Next_project" className={styles["c-footer__link"]} target="_blank" rel="noopener noreferrer">
-            Made by <strong>Roy Roodenburg</strong> <img src="/images/github-white.png" alt="Vercel Logo" className={styles.logo} />
+            Made by <strong>Roy Roodenburg</strong> <img src="/images/github.svg" alt="Vercel Logo" className={styles.logo} />
           </a>
         </footer>
       </div>

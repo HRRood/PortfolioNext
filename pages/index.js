@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Socialicons from "../components/global/SocialIcons";
 import styles from "../styles/pages/Home.module.scss";
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Roy Roodenburg</h1>
       </main>
+
+      <Socialicons />
     </div>
   );
 }

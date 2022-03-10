@@ -1,0 +1,33 @@
+.c-social-icons {
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+
+  &__list {
+    list-style: none;
+
+    li {
+      margin: 20px 0;
+      transition: all 0.2s;
+      color: #fff;
+      fill: #fff;
+
+      &:hover {
+        cursor: pointer;
+        color: rgb(146, 193, 236);
+        transform: translateY(-5px);
+
+        path {
+          fill: rgb(146, 193, 236);
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
