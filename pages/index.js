@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Infocontainer from "../components/global/InfoContainer";
+import SkillList from "../components/global/SkillList/SkillList";
 import Socialicons from "../components/global/SocialIcons";
 import styles from "../styles/pages/Home.module.scss";
 
@@ -11,7 +13,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Roy Roodenburg</h1>
+        <Infocontainer />
+        <SkillList />
       </main>
 
       <Socialicons />

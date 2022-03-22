@@ -2,11 +2,15 @@
 
 .c-social-icons {
   position: fixed;
-  bottom: 20px;
-  left: 50px;
+  bottom: -200px;
+  left: 30px;
   transition: all 0.2s ease;
 
   &--open {
+    bottom: 20px;
+  }
+
+  &--menuopen {
     @media (min-width: $screen-xs) {
       left: calc(70% + 50px);
     }

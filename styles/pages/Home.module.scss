@@ -1,4 +1,5 @@
 @import "../settings/settings.vars";
+
 .container {
   height: 100%;
   padding: 0 0.5rem;
@@ -9,19 +10,12 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 5vh 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  color: $text;
 }
 
 .logo {
