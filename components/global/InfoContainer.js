@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../../styles/components/Infocontainer.module.scss";
+import styles from "../../styles/components/InfoContainer.module.scss";
 
 const Infocontainer = () => {
   return (
