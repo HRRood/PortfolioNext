@@ -5,6 +5,17 @@
   position: relative;
   min-height: 100vh;
 
+  main {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  a {
+    color: $secondary;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -12,15 +23,10 @@
     align-items: center;
     position: absolute;
     min-height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     background: radial-gradient(circle at 100% 0%, #436394 0%, #0a192f 100.2%);
-    // background: radial-gradient(circle at 1.3% 2.8%, rgb(239, 249, 249) 0%, rgb(226, 182, 215) 100.2%);
     color: $text;
     transition: all ease-out 0.2s;
-
-    //#0a192f;
 
     header {
       height: 100px;

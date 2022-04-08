@@ -1,5 +1,4 @@
 export default function getSvgIcon(icon, color = "white", width = 24, height = 24) {
-  console.log(icon);
   switch (icon) {
     case "github":
       return (

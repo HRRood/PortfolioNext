@@ -12,7 +12,7 @@
   }
 
   &--darker {
-    color: $text-dark;
+    color: $text;
   }
 }
 
@@ -20,7 +20,6 @@
   margin: 20px 0;
   line-height: 1.15;
   color: $text;
-  width: 100%;
   max-width: 400px;
   word-wrap: break-word;
   font-size: clamp(16px, 3vw, 1.2rem);
@@ -28,10 +27,6 @@
   @media (min-width: 567px) {
     width: 60%;
   }
-}
-
-.link {
-  color: $secondary;
 }
 
 .infoContainer {

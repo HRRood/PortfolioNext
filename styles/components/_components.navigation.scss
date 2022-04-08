@@ -18,6 +18,10 @@
   &__brand {
     display: flex;
     gap: 20px;
+
+    @media (min-width: $screen-xs) {
+      position: fixed;
+    }
   }
   &__icons {
     display: flex;
