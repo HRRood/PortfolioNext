@@ -6,7 +6,7 @@ import MenuItem from "./MenuItem";
 
 import { AppContext } from "../../contexts/AppContext";
 import { menuItemType } from "../../@types/MenuItems";
-import MenuItems from "../../utils/data/menuItems.json";
+import MenuItems from "../../utils/data/MenuItems.json";
 
 export default function Navigation({}) {
   const { menuOpen, setMenuOpen } = useContext(AppContext);
