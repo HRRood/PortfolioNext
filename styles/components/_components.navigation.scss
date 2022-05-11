@@ -1,0 +1,153 @@
+.c-navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+  }
+
+  &__brand {
+    display: flex;
+    gap: 20px;
+
+    @media (min-width: $screen-xs) {
+      position: fixed;
+    }
+  }
+  &__icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-right: 20px;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: relative;
+
+    &--text {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: $border-radius-sm;
+      background: #00000093;
+      color: $primary;
+      padding: 10px 15px;
+      opacity: 0;
+      transition: all 0.2s ease-in;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #00000093 transparent;
+      }
+    }
+
+    &:hover {
+      .c-navigation__icon--text {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    background-color: $text;
+    transition: all ease-out 0.2s;
+    color: $primary;
+
+    @media (min-width: $screen-xs) {
+      width: 70%;
+      left: -70%;
+    }
+
+    @media (min-width: $screen-sm) {
+      width: 50%;
+      left: -50%;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 40%;
+      left: -40%;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 25%;
+      left: -25%;
+    }
+
+    &.open {
+      left: 0;
+    }
+
+    &__content {
+      padding: 20px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+
+    &:hover {
+      padding-left: 15px;
+    }
+
+    &__name {
+      font-size: 30px;
+      font-weight: 600;
+      color: $primary;
+
+      @media (min-width: $screen-xs) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__group {
+    padding: 10px;
+
+    &__name {
+      font-size: 25px;
+      font-weight: 670;
+      color: $primary-hover;
+      cursor: default;
+
+      @media (min-width: $screen-xs) {
+        font-size: 30px;
+      }
+    }
+
+    &__items {
+      padding: 0 20px;
+    }
+  }
+}
