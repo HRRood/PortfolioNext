@@ -5,13 +5,24 @@ import SkillListData from "../../../utils/data/SkillList.json";
 import { SkillListType } from "../../../@types/SkillList";
 
 const SkillList = () => {
-  const [activeSkill, setActiveSkill] = useState<SkillListType | null>(null);
   const skills = SkillListData as SkillListType[];
+  const [activeSkill, setActiveSkill] = useState<SkillListType>(skills[0]);
   return (
-    <>
+    <div className={styles.skillList}>
+      <div>
+        <h2 className={styles.skillListTitle}>Skills</h2>
+        <p>
+          These are my skills I am most interested in. <br /> I use confortable level as you can use experience level in percentage
+        </p>
+      </div>
+
       <div className={styles.skillListContainer}>
         {skills.map((skill) => (
-          <div className={styles.skillListItem} key={skill.name} onClick={() => setActiveSkill(skill)}>
+          <div
+            className={`${styles.skillListItem} ${skill.name === activeSkill.name ? styles.activeSkill : ""}`}
+            key={skill.name}
+            onClick={() => setActiveSkill(skill)}
+          >
             <p>{skill.name}</p>
           </div>
         ))}
@@ -28,7 +39,7 @@ const SkillList = () => {
       ) : (
         <></>
       )}
-    </>
+    </div>
   );
 };
 

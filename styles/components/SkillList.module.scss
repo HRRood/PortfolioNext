@@ -1,8 +1,14 @@
 @import "../settings/settings.vars";
 
+.skillList {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .skillListContainer {
   display: flex;
-  margin-top: 100px;
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -16,7 +22,9 @@
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.5s ease;
 
+  &.activeSkill,
   &:hover {
     background-color: $secondary;
     color: black;
@@ -25,6 +33,7 @@
 
 .skillDisplay {
   margin: 20px auto;
+  min-width: 300px;
   max-width: 300px;
   height: 100px;
   display: flex;
@@ -45,7 +54,7 @@
 .skillProgressBar {
   height: 100%;
   background-color: $secondary;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   color: $primary;
   font-weight: 600;
   display: flex;
@@ -63,4 +72,8 @@
   width: 100%;
   text-align: center;
   font-weight: 600;
+}
+
+.skillListTitle {
+  font-size: 40px;
 }
