@@ -1,0 +1,21 @@
+.c-btn {
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: $border-radius;
+  font-weight: bold;
+  font-size: 16px;
+
+  &--blk {
+    width: 100%;
+  }
+
+  &--primary {
+    background: $primary;
+    color: white;
+
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+}

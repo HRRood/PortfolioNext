@@ -1,0 +1,79 @@
+@import "../settings/settings.vars";
+
+.skillList {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillListContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skillListItem {
+  border: 2px solid $secondary;
+  padding: 10px 20px;
+  color: $secondary;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &.activeSkill,
+  &:hover {
+    background-color: $secondary;
+    color: black;
+  }
+}
+
+.skillDisplay {
+  margin: 20px auto;
+  min-width: 300px;
+  max-width: 300px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillProgress {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid $secondary;
+  position: relative;
+}
+
+.skillProgressBar {
+  height: 100%;
+  background-color: $secondary;
+  transition: all 0.5s ease;
+  color: $primary;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+
+.skillProgressText {
+  color: $primary;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.skillListTitle {
+  font-size: 40px;
+}

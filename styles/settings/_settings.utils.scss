@@ -1,0 +1,9 @@
+.hidden-xs {
+  @media (max-width: $screen-xs) {
+    display: none !important;
+  }
+}
+
+.fr {
+  float: right !important;
+}

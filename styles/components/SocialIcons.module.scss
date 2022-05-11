@@ -1,0 +1,58 @@
+@import "../settings/settings.vars";
+
+.c-social-icons {
+  position: fixed;
+  bottom: -200px;
+  left: 30px;
+  transition: all 0.2s ease;
+
+  &--open {
+    bottom: 20px;
+  }
+
+  &--menuopen {
+    @media (min-width: $screen-xs) {
+      left: calc(70% + 50px);
+    }
+
+    @media (min-width: $screen-sm) {
+      left: calc(50% + 50px);
+    }
+
+    @media (min-width: $screen-lg) {
+      left: calc(40% + 50px);
+    }
+
+    @media (min-width: $screen-xl) {
+      left: calc(25% + 50px);
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    li {
+      margin: 20px 0;
+      transition: all 0.2s;
+      color: #fff;
+      fill: #fff;
+
+      &:hover {
+        cursor: pointer;
+        color: rgb(146, 193, 236);
+        transform: translateY(-5px);
+
+        path {
+          fill: rgb(146, 193, 236);
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
