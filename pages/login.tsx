@@ -1,8 +1,9 @@
 import Input from "../components/form/Input";
 import Link from "next/link";
+import React from "react";
 
 export default function index({}) {
-  const submitForm = (e) => {
+  const submitForm = (e: React.SyntheticEvent) => {
     e.preventDefault();
   };
   return (

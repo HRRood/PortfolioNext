@@ -1,11 +1,12 @@
-import { useSelector } from "react-redux";
 import Navigation from "./Navigation/index";
 
 import styles from "../styles/Layout.module.scss";
 import getSvgIcon from "../utils/frontend";
+import { useContext } from "react";
+import { AppContext } from "../contexts/AppContext";
 
-function Layout({ children }) {
-  const { menuOpen } = useSelector((state) => state.global);
+function Layout({ children }: { children: React.ReactNode }) {
+  const { menuOpen } = useContext(AppContext);
   return (
     <div className={styles["c-app"]}>
       <div className={`${styles["c-app__content"]} ${menuOpen ? styles["u-menu-open"] : ""}`}>

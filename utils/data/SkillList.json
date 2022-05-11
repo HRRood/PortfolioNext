@@ -1,0 +1,42 @@
+[
+  {
+    "name": "JavaScript",
+    "experienceSince": 2016,
+    "knowledge": 95
+  },
+  {
+    "name": "Git",
+    "experienceSince": 2017,
+    "knowledge": 95
+  },
+  {
+    "name": "ReactJS",
+    "experienceSince": 2018,
+    "knowledge": 85
+  },
+  {
+    "name": "NodeJS (ExpressJS)",
+    "experienceSince": 2019,
+    "knowledge": 85
+  },
+  {
+    "name": "CSS (SCSS)",
+    "experienceSince": 2021,
+    "knowledge": 70
+  },
+  {
+    "name": "NextJS",
+    "experienceSince": 2022,
+    "knowledge": 50
+  },
+  {
+    "name": "MySQL",
+    "experienceSince": 2018,
+    "knowledge": 50
+  },
+  {
+    "name": "Mongo",
+    "experienceSince": 2021,
+    "knowledge": 30
+  }
+]

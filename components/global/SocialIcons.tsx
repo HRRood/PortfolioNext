@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../../contexts/AppContext";
 
 // Styles
 import styles from "../../styles/components/SocialIcons.module.scss";
 import getSvgIcon from "../../utils/frontend";
 
 const Socialicons = () => {
-  const { menuOpen } = useSelector((state) => state.global);
+  const { menuOpen } = useContext(AppContext);
   const [open, setOpen] = useState(false);
 
   return (

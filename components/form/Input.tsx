@@ -1,4 +1,11 @@
-export default function Input({ id, label, name, type }) {
+type Props = {
+  id: string;
+  label: string;
+  name: string;
+  type: string;
+};
+
+export default function Input({ id, label, name, type }: Props) {
   return (
     <div className="c-input">
       <div className="c-input__content">

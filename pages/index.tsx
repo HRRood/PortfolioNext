@@ -1,3 +1,4 @@
+import { NextPage } from "next";
 import Head from "next/head";
 import Infocontainer from "../components/global/InfoContainer";
 import SkillList from "../components/global/SkillList/SkillList";

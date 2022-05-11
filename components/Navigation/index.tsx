@@ -1,19 +1,25 @@
+import { useContext } from "react";
+
+// Components
 import Hamburger from "./Hamburger";
-import { useDispatch, useSelector } from "react-redux";
-import { setMenuOpen } from "../../utils/reducers/global";
 import MenuItem from "./MenuItem";
 
+import { AppContext } from "../../contexts/AppContext";
+import { menuItemType } from "../../@types/MenuItems";
+import MenuItems from "../../utils/data/menuItems.json";
+
 export default function Navigation({}) {
-  const { menuOpen, menuItems } = useSelector((state) => state.global);
-  const dispatch = useDispatch();
+  const { menuOpen, setMenuOpen } = useContext(AppContext);
+
+  const menuItems = MenuItems as menuItemType[];
 
   const toggleMenu = () => {
-    dispatch(setMenuOpen(!menuOpen));
+    setMenuOpen(!menuOpen);
   };
 
-  const renderMenuItems = (items = []) => {
+  const renderMenuItems = (items: menuItemType[]) => {
     return items.map((item, i) => {
-      if (item.group) {
+      if (item.group && item.items) {
         return (
           <div key={i} className="c-navigation__group">
             <p className="c-navigation__group__name">{item.group}</p>

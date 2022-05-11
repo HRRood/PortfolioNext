@@ -1,4 +1,4 @@
-export default function getSvgIcon(icon, color = "white", width = 24, height = 24) {
+export default function getSvgIcon(icon: string, color = "white", width = 24, height = 24) {
   switch (icon) {
     case "github":
       return (
