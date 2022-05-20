@@ -17,6 +17,15 @@
       {
         "name": "Grocerylist",
         "path": "/grocerylist"
+      },
+      {
+        "group": "Games",
+        "items": [
+          {
+            "name": "TicTacToe",
+            "path": "/games/tictactoe"
+          }
+        ]
       }
     ]
   },
