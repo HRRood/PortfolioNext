@@ -1,0 +1,97 @@
+@import "settings/settings.vars";
+
+.c-app {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at 100% 0%, #436394 0%, #0a192f 100.2%);
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  a {
+    color: $secondary;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    min-height: 100vh;
+    inset: 0;
+    color: $text;
+    transition: all ease-out 0.2s;
+
+    header {
+      height: 100px;
+      width: 100vw;
+      position: relative;
+    }
+
+    main {
+      flex: 1;
+      width: 100vw;
+    }
+
+    footer {
+      min-height: 50px;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: $screen-sm) {
+        min-height: 100px;
+      }
+    }
+
+    &.u-menu-open {
+      left: 100%;
+      right: -100%;
+
+      @media (min-width: $screen-xs) {
+        left: 70%;
+        right: -70%;
+      }
+
+      @media (min-width: $screen-sm) {
+        left: 50%;
+        right: -50%;
+      }
+
+      @media (min-width: $screen-lg) {
+        left: 40%;
+        right: -40%;
+      }
+
+      @media (min-width: $screen-xl) {
+        left: 25%;
+        right: -25%;
+      }
+    }
+  }
+}
+
+// .c-main {
+//   position: relative;
+// }
+
+.c-footer {
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.logo {
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

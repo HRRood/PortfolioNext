@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Home",
+    "path": "/"
+  },
+  {
+    "name": "History",
+    "path": "/history"
+  },
+  {
+    "group": "Projects",
+    "items": [
+      {
+        "name": "Todo",
+        "path": "/my-todos"
+      },
+      {
+        "name": "Grocerylist",
+        "path": "/grocerylist"
+      },
+      {
+        "group": "Games",
+        "items": [
+          {
+            "name": "TicTacToe",
+            "path": "/games/tictactoe"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Contact",
+    "path": "/contact"
+  },
+  {
+    "name": "Login",
+    "path": "/login"
+  }
+]
