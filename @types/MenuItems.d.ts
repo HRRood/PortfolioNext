@@ -3,4 +3,5 @@ export type menuItemType = {
   path: string;
   group?: string;
   items?: menuItemType[];
+  visible: boolean;
 };

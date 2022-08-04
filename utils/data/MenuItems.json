@@ -1,40 +1,49 @@
 [
   {
     "name": "Home",
-    "path": "/"
+    "path": "/",
+    "visible": true
   },
   {
     "name": "History",
-    "path": "/history"
+    "path": "/history",
+    "visible": false
   },
   {
     "group": "Projects",
+    "visible": false,
     "items": [
       {
         "name": "Todo",
-        "path": "/my-todos"
+        "path": "/my-todos",
+        "visible": false
       },
       {
         "name": "Grocerylist",
-        "path": "/grocerylist"
-      },
+        "path": "/grocerylist",
+        "visible": false
+      }
+    ]
+  },
+  {
+    "group": "Games",
+    "visible": true,
+    "items": [
       {
-        "group": "Games",
-        "items": [
-          {
-            "name": "TicTacToe",
-            "path": "/games/tictactoe"
-          }
-        ]
+        "name": "TicTacToe",
+        "path": "/games/tictactoe",
+        "visible": true
       }
     ]
   },
   {
     "name": "Contact",
-    "path": "/contact"
+    "path": "/contact",
+    "visible": false
   },
   {
     "name": "Login",
-    "path": "/login"
+    "path": "/login",
+    "visible": false
   }
 ]
