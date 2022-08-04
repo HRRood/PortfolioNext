@@ -6,8 +6,6 @@ const Infocontainer = () => {
   return (
     <div className={styles.infoContainer}>
       <h1>
-        <span className={`${styles.title} ${styles["title--smaller"]} ${styles["title--darker"]}`}>Hi, I am</span>
-        <br />
         <span className={styles.title}>Roy Roodenburg</span>
         <br />
 

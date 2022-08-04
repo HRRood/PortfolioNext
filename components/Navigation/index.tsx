@@ -18,18 +18,20 @@ export default function Navigation({}) {
   };
 
   const renderMenuItems = (items: menuItemType[]) => {
-    return items.map((item, i) => {
-      if (item.group && item.items) {
-        return (
-          <div key={i} className="c-navigation__group">
-            <p className="c-navigation__group__name">{item.group}</p>
-            <div className="c-navigation__group__items">{renderMenuItems(item.items)}</div>
-          </div>
-        );
-      } else {
-        return <MenuItem key={i} name={item.name} url={item.path} />;
-      }
-    });
+    return items
+      .filter((item) => item.visible)
+      .map((item, i) => {
+        if (item.group && item.items) {
+          return (
+            <div key={i} className="c-navigation__group">
+              <p className="c-navigation__group__name">{item.group}</p>
+              <div className="c-navigation__group__items">{renderMenuItems(item.items)}</div>
+            </div>
+          );
+        } else {
+          return <MenuItem key={i} name={item.name} url={item.path} />;
+        }
+      });
   };
 
   return (
