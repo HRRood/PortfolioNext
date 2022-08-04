@@ -3,8 +3,8 @@ type Props = {
   label: string;
   name: string;
   type: string;
-  value: any;
-  inputRef: React.RefObject<HTMLInputElement>;
+  value?: any;
+  inputRef?: React.RefObject<HTMLInputElement>;
 };
 
 export default function Input({ id, label, name, type, value, inputRef }: Props) {

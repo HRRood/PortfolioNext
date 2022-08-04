@@ -10,7 +10,7 @@
 .skillListContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -23,11 +23,18 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.5s ease;
+  flex: 1;
+  max-width: 200px;
 
   &.activeSkill,
   &:hover {
     background-color: $secondary;
     color: black;
+  }
+
+  p {
+    text-align: center;
+    white-space: nowrap;
   }
 }
 
@@ -35,7 +42,6 @@
   margin: 20px auto;
   min-width: 300px;
   max-width: 300px;
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

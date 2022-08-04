@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Infocontainer from "../components/global/InfoContainer";
-import SkillList from "../components/global/SkillList/SkillList";
-import Socialicons from "../components/global/SocialIcons";
+import SkillList from "../components/global/SkillList";
 
 export default function Home() {
   return (
@@ -15,8 +14,6 @@ export default function Home() {
         <Infocontainer />
         <SkillList />
       </div>
-
-      <Socialicons />
     </>
   );
 }
