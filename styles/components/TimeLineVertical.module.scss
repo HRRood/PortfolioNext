@@ -1,0 +1,10 @@
+.VerticalTimeLine {
+  margin: 40px 0;
+}
+
+.verticalTimelineElementDate {
+  @media (min-width: 1170px) {
+    color: #fff;
+  }
+  font-weight: bold;
+}
