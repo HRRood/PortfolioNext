@@ -19,6 +19,9 @@
     color: $primary;
 
     @media (min-width: $screen-xs) {
+      .c-hamburger__wrapper {
+        display: none;
+      }
       width: 70%;
       left: -70%;
     }
