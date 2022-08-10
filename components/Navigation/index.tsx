@@ -41,6 +41,7 @@ export default function Navigation({}) {
       </div>
 
       <div className={`c-navigation--side ${menuOpen ? "open" : ""}`}>
+        <Hamburger handleClick={toggleMenu} isOpen={menuOpen} />
         <div className="c-navigation--side__content">{renderMenuItems(menuItems)}</div>
       </div>
     </nav>
