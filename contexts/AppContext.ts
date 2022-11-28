@@ -4,4 +4,6 @@ import { AppContextType } from "../@types/AppContext";
 export const AppContext = createContext<AppContextType>({
   menuOpen: false,
   setMenuOpen: () => {},
+  user: null,
+  setUser: () => {},
 });

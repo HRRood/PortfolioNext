@@ -9,7 +9,7 @@ import { menuItemType } from "../../@types/MenuItems";
 import MenuItems from "../../utils/data/MenuItems.json";
 
 export default function Navigation({}) {
-  const { menuOpen, setMenuOpen } = useContext(AppContext);
+  const { menuOpen, setMenuOpen, user } = useContext(AppContext);
 
   const menuItems = MenuItems as menuItemType[];
 
@@ -20,6 +20,7 @@ export default function Navigation({}) {
   const renderMenuItems = (items: menuItemType[]) => {
     return items
       .filter((item) => item.visible)
+      .filter((item) => !item.needsLogin || (item.needsLogin && user))
       .map((item, i) => {
         if (item.group && item.items) {
           return (
@@ -35,7 +36,7 @@ export default function Navigation({}) {
   };
 
   return (
-    <nav className="c-navigation">
+    <nav className="c-navigation" suppressHydrationWarning={true}>
       <div className="c-navigation__brand">
         <Hamburger handleClick={toggleMenu} isOpen={menuOpen} />
       </div>

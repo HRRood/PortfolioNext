@@ -4,4 +4,5 @@ export type menuItemType = {
   group?: string;
   items?: menuItemType[];
   visible: boolean;
+  needsLogin?: boolean;
 };

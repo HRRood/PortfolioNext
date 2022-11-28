@@ -11,8 +11,14 @@
   },
   {
     "group": "Projects",
-    "visible": false,
+    "visible": true,
     "items": [
+      {
+        "name": "Collections",
+        "path": "/collections",
+        "visible": true,
+        "needsLogin": true
+      },
       {
         "name": "Todo",
         "path": "/my-todos",
@@ -42,8 +48,9 @@
     "visible": false
   },
   {
-    "name": "Login",
-    "path": "/login",
-    "visible": false
+    "name": "Logout",
+    "path": "/logout",
+    "visible": true,
+    "needsLogin": true
   }
 ]
