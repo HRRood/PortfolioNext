@@ -1,0 +1,29 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #0a192f;
+}
+
+.table_header {
+  background-color: #0a192f;
+  th {
+    text-align: left;
+    padding: 12px 8px;
+  }
+}
+
+.table_row {
+  // border-top: 1px solid #0a192f;
+  &:nth-child(even) {
+    background-color: #0e25495a;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #0e2549;
+  }
+
+  td {
+    padding: 8px;
+  }
+}
