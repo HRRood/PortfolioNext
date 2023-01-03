@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useContext } from "react";
-import { AppContext } from "../../contexts/AppContext";
+import { AppContext } from "../../../contexts/AppContext";
 
 type Props = {
   name: string;

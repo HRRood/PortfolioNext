@@ -1,11 +1,11 @@
-import Navigation from "./Navigation/index";
+import Navigation from "./header/navigation/index";
 
 import styles from "../styles/Layout.module.scss";
 import getSvgIcon from "../utils/frontend";
-import { useContext } from "react";
+import {ReactNode, useContext} from "react";
 import { AppContext } from "../contexts/AppContext";
 
-function Layout({ children }: { children: React.ReactNode }) {
+function Layout({ children }: { children: ReactNode }) {
   const { menuOpen } = useContext(AppContext);
   return (
     <div className={styles["c-app"]}>

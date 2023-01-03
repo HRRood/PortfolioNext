@@ -1,4 +1,4 @@
-import { BoardItem } from "../../../@types/games/TicTacToe";
+import { BoardItem } from "../../../contexts/games/TicTacToeContext";
 
 export function getGameStatus(board: BoardItem[]): string {
   const winningConditions = [

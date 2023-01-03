@@ -7,6 +7,7 @@ import Socialicons from "../components/global/SocialIcons";
 import { AppProps } from "next/app";
 import { User } from "../lib/session";
 import useUser from "../hooks/useUser";
+import UserInfo from "../components/header/userinfo";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { loading, userData } = useUser();
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Layout>
         <Component {...pageProps} />
         <Socialicons />
+        <UserInfo />
       </Layout>
     </AppContext.Provider>
   );

@@ -4,20 +4,27 @@ import { useContext } from "react";
 import Hamburger from "./Hamburger";
 import MenuItem from "./MenuItem";
 
-import { AppContext } from "../../contexts/AppContext";
-import { menuItemType } from "../../@types/MenuItems";
-import MenuItems from "../../utils/data/MenuItems.json";
+import { AppContext } from "../../../contexts/AppContext";
+import MenuItems from "../../../utils/data/MenuItems.json";
 
-export default function Navigation({}) {
+export type MenuItemType = {
+  name: string;
+  path: string;
+  group?: string;
+  items?: MenuItemType[];
+  visible: boolean;
+  needsLogin?: boolean;
+};
+
+export default function Navigation() {
   const { menuOpen, setMenuOpen, user } = useContext(AppContext);
-
-  const menuItems = MenuItems as menuItemType[];
+  const menuItems = MenuItems as MenuItemType[];
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const renderMenuItems = (items: menuItemType[]) => {
+  const renderMenuItems = (items: MenuItemType[]) => {
     return items
       .filter((item) => item.visible)
       .filter((item) => !item.needsLogin || (item.needsLogin && user))

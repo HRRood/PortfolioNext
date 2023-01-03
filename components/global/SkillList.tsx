@@ -2,7 +2,12 @@ import React, { useState } from "react";
 
 import styles from "../../styles/components/SkillList.module.scss";
 import SkillListData from "../../utils/data/SkillList.json";
-import { SkillListType } from "../../@types/SkillList";
+
+export type SkillListType = {
+  name: string;
+  experienceSince: number;
+  knowledge: number;
+};
 
 const SkillList = () => {
   const skills = SkillListData as SkillListType[];
