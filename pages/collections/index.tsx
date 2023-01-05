@@ -1,5 +1,4 @@
 import { sessionOptions, User } from "../../lib/session";
-import { getUserByData } from "../api/auth";
 import { withIronSessionSsr } from "iron-session/next";
 
 import { InferGetServerSidePropsType } from "next";
@@ -66,22 +65,7 @@ export const getServerSideProps = withIronSessionSsr(async function ({ req, res 
     };
   }
 
-  const userData = await getUserByData(user);
-
-  if (!userData || !userData.success) {
-    res.setHeader("location", "/login");
-    res.statusCode = 302;
-    res.end();
-    return {
-      props: {
-        collections: [],
-      },
-    };
-  }
-
-  const mappedUser = userData.data as User;
-
-  const userCollections: Collection[] = await getCollectionsByUserId(mappedUser.id);
+  const userCollections: Collection[] = await getCollectionsByUserId(user.id);
   return {
     props: { collections: userCollections },
   };

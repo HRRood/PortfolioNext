@@ -43,7 +43,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<ResponseObject>
 
       if (rows.length === 0) {
         closeConnection(db);
-        res.status(200).json({ success: false, error: "Invalid email or password" });
+        res.status(200).json({ success: false, error: "User not found" });
         return;
       }
 
@@ -51,7 +51,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse<ResponseObject>
 
       if (!comparePassword(password, user.password)) {
         closeConnection(db);
-        res.status(200).json({ success: false, error: "Invalid email or password" });
+        res.status(200).json({ success: false, error: "Invalid password" });
         return;
       }
 

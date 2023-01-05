@@ -6,6 +6,7 @@ import MenuItem from "./MenuItem";
 
 import { AppContext } from "../../../contexts/AppContext";
 import MenuItems from "../../../utils/data/MenuItems.json";
+import UserInfo from "../userinfo";
 
 export type MenuItemType = {
   name: string;
@@ -14,6 +15,7 @@ export type MenuItemType = {
   items?: MenuItemType[];
   visible: boolean;
   needsLogin?: boolean;
+  hideLogin?: boolean;
 };
 
 export default function Navigation() {
@@ -28,6 +30,7 @@ export default function Navigation() {
     return items
       .filter((item) => item.visible)
       .filter((item) => !item.needsLogin || (item.needsLogin && user))
+      .filter((item) => !(item.hideLogin === true && user))
       .map((item, i) => {
         if (item.group && item.items) {
           return (
@@ -50,7 +53,12 @@ export default function Navigation() {
 
       <div className={`c-navigation--side ${menuOpen ? "open" : ""}`}>
         <Hamburger handleClick={toggleMenu} isOpen={menuOpen} />
-        <div className="c-navigation--side__content">{renderMenuItems(menuItems)}</div>
+        <div className="c-navigation--side__content">
+          <div>{renderMenuItems(menuItems)}</div>
+          <div>
+            <UserInfo />
+          </div>
+        </div>
       </div>
     </nav>
   );

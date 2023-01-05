@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import mysql from "mysql2/promise";
 
 import { withIronSessionApiRoute } from "iron-session/next";
 import { sessionOptions, User } from "../../lib/session";
@@ -8,17 +7,8 @@ import { closeConnection, getConnection } from "../../utils/backend/dbConnection
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.session.user) {
-    const userById = await getUserByData(req.session.user);
-
-    if (!userById || !userById.success) {
-      req.session.destroy();
-
-      return res.status(200).json({ success: false, error: "User not found" });
-    }
-
-    const updatedUser = userById.data as User;
     res.json({
-      data: updatedUser,
+      data: req.session.user,
       isLoggedIn: true,
       success: true,
     });

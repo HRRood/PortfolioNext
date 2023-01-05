@@ -48,6 +48,13 @@
     "visible": false
   },
   {
+    "name": "Login",
+    "path": "/login",
+    "visible": true,
+    "needsLogin": false,
+    "hideLogin": true
+  },
+  {
     "name": "Logout",
     "path": "/logout",
     "visible": true,
