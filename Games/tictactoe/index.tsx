@@ -4,9 +4,8 @@ import React, { useState } from "react";
 import Init from "./views/Init";
 import Score from "./views/Score";
 import Board from "./views/Board";
-import { TicTacToeContext, defaultTicTacToeContext } from "../../contexts/games/TicTacToeContext";
+import { BoardItem, TicTacToeContext, defaultTicTacToeContext } from "../../contexts/games/TicTacToeContext";
 import Player from "./classes/Player";
-import { BoardItem } from "../../@types/games/TicTacToe";
 
 import styles from "./styles/Tictactoe.module.scss";
 

@@ -3,7 +3,7 @@ import Player from "../../Games/tictactoe/classes/Player";
 
 export const GAMESTATES = ["init", "score", "progress"];
 
-interface TicTacToeContextType {
+export interface TicTacToeContextType {
   gameState: string;
   setGameState: (gameState: string) => void;
   players: Player[];
@@ -22,14 +22,14 @@ interface TicTacToeContextType {
   setTie: (tie: boolean) => void;
 }
 
-interface BoardItem {
+export interface BoardItem {
   value: string;
   x: number;
   y: number;
   neighbours: NeighbourBoardItem[];
 }
 
-interface NeighbourBoardItem {
+export interface NeighbourBoardItem {
   x: number;
   y: number;
 }

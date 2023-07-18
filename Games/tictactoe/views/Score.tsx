@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { BoardItem, NeighbourBoardItem } from "../../../@types/games/TicTacToe";
-import { GAMESTATES, TicTacToeContext } from "../../../contexts/games/TicTacToeContext";
+import { BoardItem, GAMESTATES, NeighbourBoardItem, TicTacToeContext } from "../../../contexts/games/TicTacToeContext";
 
 import styles from "../styles/Tictactoe.module.scss";
 
