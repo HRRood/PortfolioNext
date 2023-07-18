@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { FaTimes } from "react-icons/fa";
-import { GoPrimitiveDot } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 import { TicTacToeContext } from "../../../contexts/games/TicTacToeContext";
 import { getGameStatus } from "../utils";
 
 import styles from "../styles/Tictactoe.module.scss";
+import { constants } from "crypto";
 
 type Props = {
   value: string;
@@ -16,7 +17,7 @@ export default function BoardItem({ value, y, x }: Props) {
 
   const handleClick = () => {
     const itemIndex = board.findIndex((item) => item.x === x && item.y === y);
-
+    constants;
     if (itemIndex < 0) return;
 
     if (board[itemIndex].value !== "") return;
@@ -48,7 +49,7 @@ export default function BoardItem({ value, y, x }: Props) {
       case "x":
         return <FaTimes style={{ color: "rgb(255, 255, 255)" }} />;
       case "o":
-        return <GoPrimitiveDot style={{ color: "rgb(255,255,255)" }} />;
+        return <GoDotFill style={{ color: "rgb(255,255,255)" }} />;
       default:
         return "";
     }

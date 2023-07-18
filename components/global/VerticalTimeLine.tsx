@@ -33,7 +33,10 @@ const VerticalTimeLine = (props: Props) => {
         >
           <h3 className="vertical-timeline-element-title">Buro CITE</h3>
           <h5 className="vertical-timeline-element-subtitle">Intern</h5>
-          <p>A variaty of assignments to develop components for DALI LIOR made with ReactJS, a user friendly web application used by Municipalities.</p>
+          <p>
+            During my internship, I undertook diverse assignments to develop ReactJS components for DALI LIOR, a user-friendly web application widely used by
+            Municipalities.
+          </p>
           <p>JavaScript | ReactJS</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -47,8 +50,8 @@ const VerticalTimeLine = (props: Props) => {
           <h3 className="vertical-timeline-element-title">Deverence Group</h3>
           <h5 className="vertical-timeline-element-subtitle">Intern</h5>
           <p>
-            Maintained and created new features for their low code platform RUAL, and used this low code platform to maintain and create an ERP-System for a big
-            Flower Exporter
+            During my internship, I worked on maintaining and adding new features to the low-code platform RUAL. Additionally, I used this platform to create
+            and maintain an ERP-System for a prominent Flower Exporter.
           </p>
           <p>JavaScript | VueJS | NodeJS | ExpressJS</p>
         </VerticalTimelineElement>
@@ -63,8 +66,8 @@ const VerticalTimeLine = (props: Props) => {
           <h3 className="vertical-timeline-element-title">HBO-ICT Deeltijd (Parttime)</h3>
           <h5 className="vertical-timeline-element-subtitle">Student</h5>
           <p>
-            I started the HBO with the intention of working and learning at the same time, so that I would gain experience in the IT field and get my HBO
-            degree.
+            With the goal of both working and learning simultaneously, I enrolled in HBO. This decision was driven by my desire to gain valuable experience in
+            the IT field while also obtaining my HBO degree.
           </p>
           <p>Java | JavaScript | Variaty of design patterns | BigData | MySql | CI/CD</p>
         </VerticalTimelineElement>
@@ -76,9 +79,9 @@ const VerticalTimeLine = (props: Props) => {
           icon={<MdOutlineSchool />}
           iconStyle={{ background: "#e4f9ff", color: "#0a192f" }}
         >
-          <h3 className="vertical-timeline-element-title">HBO-ICT Bachelor Propedeuse)</h3>
+          <h3 className="vertical-timeline-element-title">HBO-ICT Propedeuse</h3>
           <h5 className="vertical-timeline-element-subtitle">Student</h5>
-          <p>Received my bachelor degree.</p>
+          <p>Received my propedeuse degree.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           date="Sept 2019 - Jan 2021"
@@ -91,25 +94,43 @@ const VerticalTimeLine = (props: Props) => {
           <h3 className="vertical-timeline-element-title">Deverence Group</h3>
           <h5 className="vertical-timeline-element-subtitle">Web developer</h5>
           <p>
-            Got the opportunity to work and learn at my internship at Deverence Group. I worked on the same projects as my intern period. Increased my knowledge
-            of javascript (vuejs), working with customers and the logic behind programming
+            Upon the conclusion of my internship at Deverence Group, I was offered a full-time position, which I gladly accepted. This job allowed me to
+            continue working on the same projects as during my internship period. Throughout this experience, I significantly enhanced my proficiency in
+            JavaScript, particularly with a focus on Vue.js. Moreover, I had the opportunity to engage with customers, further refining my interpersonal skills,
+            and gained deeper insights into programming logic.
           </p>
           <p>JavaScript | VueJS | NodeJS | ExpressJS</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           date="Mar 2021 - Present"
           dateClassName={styles.verticalTimelineElementDate}
-          contentStyle={{ background: "#0fabbc", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  #0fabbc" }}
+          contentStyle={{ background: "#0a192f", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid  #0a192f" }}
           icon={<MdOutlineWorkOutline />}
-          iconStyle={{ background: "#0fabbc", color: "#fff" }}
+          iconStyle={{ background: "#0a192f", color: "#fff" }}
         >
-          <h3 className="vertical-timeline-element-title">Pangaea Digital Agency</h3>
-          <h5 className="vertical-timeline-element-subtitle">Technical Frontend Developer</h5>
+          <h3 className="vertical-timeline-element-title">PANGAEA Digital Agency</h3>
+          <h5 className="vertical-timeline-element-subtitle">Software developer</h5>
           <p>
-            Currently working for Pangaea Digital Agency. Working on small and large web applications with a variaty of web sites, web shops and hotel sites.
+            I am currently employed at Pangaea Digital Agency, actively engaged in developing a diverse range of web applications, encompassing web shops, hotel
+            sites, and various other websites, with a primary emphasis on ecommerce solutions.
           </p>
-          <p>JavaScript | ReactJS | C# | SCSS | Mongo | MsSql | GitFlow</p>
+          <p>JavaScript | ReactJS | NestJS | C# | SCSS | Mongo | MsSql | GitFlow</p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          date="Jul 2023"
+          dateClassName={styles.verticalTimelineElementDate}
+          contentStyle={{ background: "#e4f9ff", color: "#0a192f" }}
+          contentArrowStyle={{ borderRight: "7px solid  #e4f9ff" }}
+          icon={<MdOutlineSchool />}
+          iconStyle={{ background: "#e4f9ff", color: "#0a192f" }}
+        >
+          <h3 className="vertical-timeline-element-title">HBO-ICT Bachelor of Sience</h3>
+          <h5 className="vertical-timeline-element-subtitle">Student</h5>
+          <p>
+            I successfully completed my graduating assignment for PANGAEA, wherein I conducted research to devise and implement an optimal performance dashboard
+            for their ecommerce sites within their CMS platform.
+          </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>

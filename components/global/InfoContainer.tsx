@@ -12,10 +12,8 @@ const Infocontainer = () => {
         <span className={`${styles.title} ${styles["title--smaller"]}`}>Web Developer</span>
       </h1>
       <p className={styles.description}>
-        I'm a developer specializing in web applications. Currently working on building ecommerce platforms at{" "}
-        <a className={styles.link} target="_blank" rel="noopener noreferrer" href="https://www.pangaea.nl/">
-          Pangaea Digital Agency
-        </a>
+        I am a web application developer with a focus on creating dynamic and interactive websites. Currently, I am employed at Pangaea Digital Agency, where I
+        actively contribute to the development of various web applications and online solutions.
       </p>
     </div>
   );
