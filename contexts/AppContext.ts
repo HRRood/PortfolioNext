@@ -1,5 +1,9 @@
 import { createContext } from "react";
-import { AppContextType } from "../@types/AppContext";
+
+interface AppContextType {
+  menuOpen: boolean;
+  setMenuOpen: (menuOpen: boolean) => void;
+}
 
 export const AppContext = createContext<AppContextType>({
   menuOpen: false,

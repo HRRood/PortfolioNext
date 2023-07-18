@@ -5,8 +5,15 @@ import Hamburger from "./Hamburger";
 import MenuItem from "./MenuItem";
 
 import { AppContext } from "../../contexts/AppContext";
-import { menuItemType } from "../../@types/MenuItems";
 import MenuItems from "../../utils/data/MenuItems.json";
+
+interface menuItemType {
+  name: string;
+  path: string;
+  group?: string;
+  items?: menuItemType[];
+  visible: boolean;
+}
 
 export default function Navigation({}) {
   const { menuOpen, setMenuOpen } = useContext(AppContext);

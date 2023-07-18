@@ -10,7 +10,6 @@ export default function Home() {
     <>
       <Head>
         <title>Roy Roodenburg</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.home}>
         <Infocontainer />

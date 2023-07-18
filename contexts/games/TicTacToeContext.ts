@@ -1,9 +1,38 @@
-import { BoardItem, TicTacToeContextType } from "./../../@types/games/TicTacToe.d";
 import { createContext } from "react";
 import Player from "../../Games/tictactoe/classes/Player";
 
 export const GAMESTATES = ["init", "score", "progress"];
 
+interface TicTacToeContextType {
+  gameState: string;
+  setGameState: (gameState: string) => void;
+  players: Player[];
+  setPlayers: (players: Player[]) => void;
+  board: BoardItem[];
+  setBoard: (board: BoardItem[]) => void;
+  turn: string;
+  setTurn: (turn: string) => void;
+  playerStart: string;
+  setPlayerStart: (playerStart: string) => void;
+  winner: number;
+  setWinner: (winner: number) => void;
+  finished: boolean;
+  setFinished: (finished: boolean) => void;
+  tie: boolean;
+  setTie: (tie: boolean) => void;
+}
+
+interface BoardItem {
+  value: string;
+  x: number;
+  y: number;
+  neighbours: NeighbourBoardItem[];
+}
+
+interface NeighbourBoardItem {
+  x: number;
+  y: number;
+}
 export const defaultTicTacToeContext: TicTacToeContextType = {
   gameState: "init",
   setGameState: (gameState: string) => {},
